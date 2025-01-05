@@ -1,0 +1,59 @@
+<div class="register-page">
+  <div class="left-side">
+    <img src="signup.jpg" alt="Signup Image" class="signup-image">
+  </div>
+  <div class="right-side">
+    <h3>Create a new account!</h3>
+    <form (ngSubmit)="registerNewUser()" class="form-width">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="firstName" class="form-control" [(ngModel)]="firstName" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="lastName" class="form-control" [(ngModel)]="lastName" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" required>
+        <button type="button" (click)="showOtp = !showOtp" class="verify-btn">Verify</button>
+      </div>
+
+      <ng-container *ngIf="showOtp">
+        <div class="otp-container">
+          <h6 class="text-center mb-4">Enter OTP</h6>
+          <form class="otp-form">
+            <div class="otp-boxes">
+              <input type="text" maxlength="1" class="otp-input" (input)="moveFocus($event, 1)" #otp1 />
+              <input type="text" maxlength="1" class="otp-input" (input)="moveFocus($event, 2)" #otp2 />
+              <input type="text" maxlength="1" class="otp-input" (input)="moveFocus($event, 3)" #otp3 />
+              <input type="text" maxlength="1" class="otp-input" (input)="moveFocus($event, 4)" #otp4 />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">Submit</button>
+          </form>
+        </div>
+      </ng-container>
+  
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" class="form-control" [(ngModel)]="phone" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirmPassword" class="form-control" [(ngModel)]="confirmPassword" required>
+      </div>
+  
+      <button type="submit" class="btn-submit">Register</button>
+    </form>
+  
+    <p>Already have an account? <a [routerLink]="'/login'">Login</a></p>
+  </div>
+</div>

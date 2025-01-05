@@ -1,0 +1,101 @@
+.important-tasks {
+  display: flex;
+  flex-direction: column;      
+  padding: 20px;            
+}
+
+.important-tasks span {
+  display: flex;
+  align-items: center;        
+}
+
+.important-tasks span i {
+  color: #007bff;
+}
+
+.important-tasks i {
+  font-size: 18px;             
+  margin-right: 10px;         
+}
+
+.important-tasks h2 {
+  margin: 0;                  
+  font-size: 24px;             
+  color: #007bff;              
+}
+
+.task-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;            
+}
+
+.task-input-container input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;               
+  max-width: 500px;           
+}
+
+.save-task-btn {
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.important-tasks ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0;            
+  width: 100%;               
+}
+
+.important-tasks li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 18px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.important-tasks li span {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 16px;
+  padding: 0;
+}
+
+.edit-btn {
+  color: #007bff;
+}
+
+.delete-btn {
+  color: red;
+}
+
+.edit-btn:hover {
+  color: #f0ad4e;
+}
+
+.delete-btn:hover {
+  color: #d9534f;
+}

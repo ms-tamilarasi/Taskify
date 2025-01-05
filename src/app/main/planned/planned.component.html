@@ -1,0 +1,14 @@
+<div class="planned-tasks-container">
+  <span>
+    <i class="fa-solid fa-calendar"></i>
+    <h3>Planned Tasks</h3>
+  </span>
+  <ul>
+    <li *ngFor="let task of plannedTasks">
+      <span>{{ task.text }}</span>
+      <div class="due-date-box">
+        {{ task.dueDate | date: 'dd/MM/yyyy' }}
+      </div>
+    </li>
+  </ul>
+</div>

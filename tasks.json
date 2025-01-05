@@ -1,0 +1,60 @@
+{
+  "tasks": [
+    {
+      "text": "Complete homework",
+      "isImportant": true,
+      "isDatePickerVisible": false,
+      "dueDate": "2025-01-12",
+      "isDateAvailable": true,
+      "id": "a7f9c0bc-d9e2-4c68-a8b1-c9a05877979f"
+    },
+    {
+      "text": "Go for a run",
+      "isImportant": false,
+      "isDatePickerVisible": false,
+      "dueDate": "2025-01-13",
+      "isDateAvailable": true,
+      "id": "f9c5c1a4-b7d1-41b2-96b5-5e8da6d599b4"
+    },
+    {
+      "text": "Buy groceries",
+      "isImportant": true,
+      "isDatePickerVisible": false,
+      "dueDate": "2025-01-15",
+      "isDateAvailable": true,
+      "id": "bc2d476f-4f29-4bc1-b214-7b8c3c711be7"
+    },
+    {
+      "text": "Attend meeting",
+      "isImportant": false,
+      "isDatePickerVisible": false,
+      "dueDate": "2025-01-16",
+      "isDateAvailable": true,
+      "id": "7e2f493d-7676-4d71-b7a0-bef7ac9c347d"
+    },
+    {
+      "text": "Read a book",
+      "isImportant": false,
+      "isDatePickerVisible": false,
+      "dueDate": "2025-01-17",
+      "isDateAvailable": true,
+      "id": "d8b8b7b9-8bb9-4bfc-b34f-0bb9b417f5c3"
+    },
+    {
+      "text": "sleep early",
+      "isImportant": true,
+      "isDatePickerVisible": false,
+      "dueDate": "2025-01-11",
+      "isDateAvailable": true,
+      "id": "5b9c611f-25e8-49ff-b72c-68d8dcb75e17"
+    },
+    {
+      "id": "80f30b82-451b-4bee-938e-fd38ced2fa15",
+      "text": "Prepare for Interview",
+      "isImportant": true,
+      "isDatePickerVisible": true,
+      "dueDate": "2025-01-07",
+      "isDateAvailable": true
+    }
+  ]
+}

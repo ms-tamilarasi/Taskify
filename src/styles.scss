@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+body.dark-mode {
+  background-color: #0d1b2a;
+  color: white;
+
+  & .sidebar, 
+  & header {
+    background-color: #1b263b;
+  }
+
+  & .tasks-list  li {
+    background-color: #1b263b !important;
+  }
+
+  & .home-icon h2 {
+    color: white !important;
+  }
+
+  & .important-tasks li {
+    background-color: #1b263b !important;
+  }
+
+  & .important-tasks h2 {
+    color: white !important;
+  }
+
+  & .planned-tasks-container li {
+    background-color: #1b263b !important;
+  }
+
+  & .due-date-box {
+    background-color: #415a77 !important;
+  }
+
+  & .toggle-btn {
+    background-color: #1b263b !important;
+  }
+
+  & .planned-tasks-container h3 {
+    color: white !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Tamilarasi",
+      "lastName": "B",
+      "email": "tamil@gmail.com",
+      "phone": "1234567890",
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "firstName": "Bhuvana",
+      "lastName": "J",
+      "email": "bhuvana@gmail.com",
+      "phone": "9876543210",
+      "password": "password456"
+    },
+    {
+      "id": "5fa5",
+      "firstName": "Tom",
+      "lastName": "H",
+      "email": "tom@gmail.com",
+      "phone": "9876543217",
+      "password": "tom1234"
+    },
+    {
+      "id": "670b",
+      "firstName": "User",
+      "lastName": "1",
+      "email": "user1@gmail.com",
+      "phone": "1234567890",
+      "password": "user1@123"
+    }
+  ]
+}

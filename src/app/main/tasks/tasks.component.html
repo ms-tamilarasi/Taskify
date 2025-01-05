@@ -1,0 +1,46 @@
+<div class="tasks-container">
+   <span class="home-icon">
+    <i class="fa-solid fa-house"></i> 
+    <h2>My Tasks</h2>
+   </span>
+  
+    <div class="expand-panel">
+      <button class="add-task-btn" (click)="toggleAddTask()">
+        <i class="fa-solid fa-plus"></i> Add Task
+      </button>
+    </div>
+  
+    <div *ngIf="isAddTaskOpen" class="task-input-container">
+        <input type="text" [(ngModel)]="newTask" placeholder="Enter your task" />
+        <button class="save-task-btn" (click)="saveTask()">
+          {{isEditMode ? 'Edit' : 'Save'}} Task
+        </button>
+      </div>
+      
+      <div class="tasks-list">
+        <ul>
+          <li *ngFor="let task of tasks; let i = index">
+            <span>{{ task.text }}</span>
+            <button class="date-btn"  (click)="toggleDatePicker(i)">
+              <i class="fa-solid fa-calendar"></i>
+            </button>
+
+            <div *ngIf="task.isDatePickerVisible" class="date-picker-container">
+              <input type="date" [(ngModel)]="task.dueDate" (change)="updatePlannedTasks(i)" />
+            </div>
+
+      <button class="star-btn" (click)="markAsImportant(i)">
+        <i class="fa-solid fa-star"></i>
+      </button>
+            <button class="edit-btn" (click)="editTask(task.id)">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="delete-btn" (click)="deleteTask(task.id)">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+      
+  </div>
+  

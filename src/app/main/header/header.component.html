@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <i class="fa-solid fa-grid todo-icon"></i> 
+            <h3>ToDo</h3>
+        </div>
+        <form>
+            <div class="search-container">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" name="search" id="search" placeholder="Search..." [(ngModel)]="searchQuery" (input)="onSearch()" >
+            </div>
+        </form>
+        <div class="header-icons">
+            <button class="theme-toggle" (click)="toggleTheme()">
+                <i class="fa-solid fa-sun light-icon" *ngIf="!isDarkMode"></i>
+                <i class="fa-solid fa-moon dark-icon" *ngIf="isDarkMode"></i>
+            </button>
+            <i class="fa-solid fa-cog settings-icon"></i> 
+            <i class="fa-solid fa-user profile-icon"></i> 
+        </div>
+    </div>
+</header>
+

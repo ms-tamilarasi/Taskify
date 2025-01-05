@@ -1,0 +1,193 @@
+.tasks-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+.home-icon {
+    display: flex;             
+    align-items: center;       
+    gap: 10px;              
+    font-size: 24px;             
+  }
+  
+  .home-icon i {
+    font-size: 30px;            
+    color: #007bff;              
+  }
+  
+  .home-icon h2 {
+    font-size: 24px;            
+    margin: 0;                 
+    color: #007bff;                 
+  }
+
+  .home-icon i:hover {
+    color: #0056b3;            
+    cursor: pointer;             
+  }
+  
+  .add-task-btn {
+    background-color: white; 
+    color: #007bff; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    width: calc(100% - 320px); 
+    max-width: 800px; 
+    box-sizing: border-box;
+  }
+  
+  .add-task-btn i {
+    margin-right: 10px;
+  }
+  
+  .add-task-btn:hover {
+    background-color: #f0f0f0; 
+  }
+
+.task-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .task-input-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .save-task-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .tasks-list {
+    margin-top: 20px;
+  }
+  
+  .tasks-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tasks-list li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.date-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;             
+  margin-left: 10px;           
+  padding: 5px;               
+  color: #007bff;           
+}
+
+.date-btn i {
+  font-size: 18px;             
+}
+
+.date-btn:hover {
+  color: #f0ad4e;              
+}
+
+.date-picker-container {
+  margin-top: 5px; 
+}
+
+.date-picker-container input[type="date"] {
+  font-size: 14px;         
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 120px;             
+}
+
+.star-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 16px; 
+  }
+  
+  .star-btn i {
+    color: #ffd700;  
+  }
+  
+  .star-btn:hover i {
+    color: #f0ad4e;  
+  }
+  
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 16px; 
+    padding: 5px;    
+  }
+  
+  .edit-btn {
+    color: #007bff;
+  }
+
+  .delete-btn {
+    color: red;
+  }
+ 
+  .edit-btn:hover {
+    color: #f0ad4e; 
+  }
+  
+  .delete-btn:hover {
+    color: #d9534f; 
+  }
+  
+  .tasks-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tasks-list li span {
+    flex-grow: 1; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  
+  
+  
+  

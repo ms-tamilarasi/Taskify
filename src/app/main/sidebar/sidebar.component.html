@@ -1,0 +1,13 @@
+<button class="toggle-btn" (click)="toggleSidebar()">
+    <i class="fa-solid" [ngClass]="{'fa-chevron-right': isSidebarOpen, 'fa-chevron-left': !isSidebarOpen}"></i>
+  </button>
+  
+  <div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+    <ul class="sidebar-menu">
+      <li><a routerLink="/home/" routerLinkActive="active"><i class="fa-solid fa-list"></i> Tasks</a></li>
+      <li><a routerLink="/home/important" routerLinkActive="active"><i class="fa-solid fa-star"></i> Important</a></li>
+      <li><a routerLink="/home/planned" routerLinkActive="active"><i class="fa-solid fa-calendar"></i> Planned</a></li>
+      <li><a routerLink="/home/assigned-to-me" routerLinkActive="active"><i class="fa-solid fa-user-check"></i> Assigned to Me</a></li>
+    </ul>
+  </div>
+  

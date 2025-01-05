@@ -1,0 +1,115 @@
+$blue-light: #5d9bff;
+$blue-dark: #004a99;
+$blue: #007bff;
+$black: #000000;
+
+header {
+    background-color: $blue;
+    padding: 5px 0;  
+    width: 100%;  
+    box-sizing: border-box;  
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    padding: 0 20px;  
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.todo-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #333;
+}
+
+h3 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    display: inline-block;
+}
+
+form {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.search-container span {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+  }
+  
+  .settings-icon, .profile-icon, .light-icon, .dark-icon {
+    font-size: 24px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .settings-icon {
+    margin-right: 30px;
+  }
+  
+  .profile-icon {
+    margin-left: 20px;
+  }
+  
+  .light-icon {
+    margin-right: 30px;
+  }
+
+  .dark-icon {
+    margin-right: 30px;
+  }
+  
+  .settings-icon:hover, .profile-icon:hover, .light-icon:hover, .dark-icon:hover {
+    color: #66ccff;  
+  }
+  
+  body.dark-mode {
+    background-color: #333;
+    color: white;
+  }
+  
+
