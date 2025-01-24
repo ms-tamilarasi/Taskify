@@ -12,9 +12,10 @@ interface Task {
 
 
 @Component({
-  selector: 'app-important',
-  templateUrl: './important.component.html',
-  styleUrl: './important.component.scss'
+    selector: 'app-important',
+    templateUrl: './important.component.html',
+    styleUrl: './important.component.scss',
+    standalone: false
 })
 export class ImportantComponent {
 

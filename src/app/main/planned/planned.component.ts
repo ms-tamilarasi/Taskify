@@ -11,9 +11,10 @@ interface Task {
 }
 
 @Component({
-  selector: 'app-planned',
-  templateUrl: './planned.component.html',
-  styleUrl: './planned.component.scss'
+    selector: 'app-planned',
+    templateUrl: './planned.component.html',
+    styleUrl: './planned.component.scss',
+    standalone: false
 })
 export class PlannedComponent {
   plannedTasks: Task[] = [];
