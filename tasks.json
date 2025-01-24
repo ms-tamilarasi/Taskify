@@ -2,15 +2,15 @@
   "tasks": [
     {
       "text": "Complete homework",
-      "isImportant": true,
-      "isDatePickerVisible": false,
-      "dueDate": "2025-01-12",
+      "isImportant": false,
+      "isDatePickerVisible": true,
+      "dueDate": "2025-01-18",
       "isDateAvailable": true,
       "id": "a7f9c0bc-d9e2-4c68-a8b1-c9a05877979f"
     },
     {
       "text": "Go for a run",
-      "isImportant": false,
+      "isImportant": true,
       "isDatePickerVisible": false,
       "dueDate": "2025-01-13",
       "isDateAvailable": true,
@@ -18,7 +18,7 @@
     },
     {
       "text": "Buy groceries",
-      "isImportant": true,
+      "isImportant": false,
       "isDatePickerVisible": false,
       "dueDate": "2025-01-15",
       "isDateAvailable": true,
@@ -41,19 +41,11 @@
       "id": "d8b8b7b9-8bb9-4bfc-b34f-0bb9b417f5c3"
     },
     {
-      "text": "sleep early",
-      "isImportant": true,
-      "isDatePickerVisible": false,
-      "dueDate": "2025-01-11",
-      "isDateAvailable": true,
-      "id": "5b9c611f-25e8-49ff-b72c-68d8dcb75e17"
-    },
-    {
-      "id": "80f30b82-451b-4bee-938e-fd38ced2fa15",
-      "text": "Prepare for Interview",
-      "isImportant": true,
+      "id": "9b42814a-84cb-4d39-aef6-f3f5b0c79880",
+      "text": "Excercise ",
+      "isImportant": false,
       "isDatePickerVisible": true,
-      "dueDate": "2025-01-07",
+      "dueDate": "2025-01-17",
       "isDateAvailable": true
     }
   ]
