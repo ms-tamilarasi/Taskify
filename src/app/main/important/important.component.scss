@@ -1,60 +1,67 @@
 .important-tasks {
   display: flex;
-  flex-direction: column;      
-  padding: 20px;            
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 55px;
 }
 
 .important-tasks span {
   display: flex;
-  align-items: center;        
+  align-items: center;
 }
 
-.important-tasks span i {
-  color: #007bff;
-}
-
-.important-tasks i {
-  font-size: 18px;             
-  margin-right: 10px;         
+.important-tasks mat-icon {
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 .important-tasks h2 {
-  margin: 0;                  
-  font-size: 24px;             
-  color: #007bff;              
+  margin-left: -25px;
+  font-size: 24px;
+  color: #007bff;
 }
 
 .task-input-container {
   display: flex;
-  align-items: center;
+  align-items: stretch; 
   gap: 10px;
-  margin-top: 20px;            
+  margin-top: 50px;
 }
 
-.task-input-container input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;               
-  max-width: 500px;           
+.task-input-container mat-form-field {
+  flex-grow: 1;
+  max-width: 500px;
+  width: 100%;
+  height: 56px; 
+  margin: 0; 
+}
+
+.task-input-container .mat-form-field-infix {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .save-task-btn {
   background-color: #28a745;
   color: white;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 0 20px; 
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  height: 56px; 
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0; 
 }
+
 
 .important-tasks ul {
   list-style-type: none;
   padding: 0;
-  margin: 20px 0 0;            
-  width: 100%;               
+  margin: 20px 0 0;
+  width: 100%;
 }
 
 .important-tasks li {
@@ -62,7 +69,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 18px;
+  padding: 5px 40px;
   margin: 10px 0;
   border-radius: 8px;
   font-size: 16px;
@@ -75,27 +82,36 @@
   text-overflow: ellipsis;
 }
 
-.edit-btn, .delete-btn {
+.task-actions {
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+}
+
+.edit-btn mat-icon {
+  color: #007bff;
+}
+
+.delete-btn mat-icon {
+  color: red;
+}
+
+.edit-btn:hover mat-icon {
+  color: #f0ad4e;
+}
+.delete-btn {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 18px;
-  margin-left: 16px;
   padding: 0;
 }
 
-.edit-btn {
-  color: #007bff;
-}
-
-.delete-btn {
-  color: red;
-}
-
-.edit-btn:hover {
-  color: #f0ad4e;
-}
-
-.delete-btn:hover {
+.delete-btn:hover mat-icon {
   color: #d9534f;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  background-color: #28a745;
+  color: white;
 }

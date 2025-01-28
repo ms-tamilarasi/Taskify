@@ -1,66 +1,4 @@
-<div class="login-container">
-  <mat-card class="login-card">
-    <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Email</mat-label>
-          <input matInput formControlName="email" type="email" placeholder="Enter your email" required>
-          <mat-error *ngIf="email?.invalid && email?.touched">Please enter a valid email</mat-error>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill" class="full-width">
-          <mat-label>Password</mat-label>
-          <input matInput formControlName="password" type="password" placeholder="Enter your password" required>
-          <mat-error *ngIf="password?.invalid && password?.touched">Password is required</mat-error>
-        </mat-form-field>
-
-        <div class="login-buttons">
-          <button mat-raised-button color="primary" type="submit" [disabled]="loginForm?.invalid">Login</button>
-        </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="login-page">
+<div class="login-page">
   <div class="left-side">
     <img src="login.jpg" alt="Login Image" class="login-image" />
   </div>
@@ -68,25 +6,35 @@
     <h3>Login to your account</h3>
     <div class="form">
       <form (ngSubmit)="onLoginClick($event)">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          [(ngModel)]="email"
-          name="email"
-          required
-        />
-        <br />
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          [(ngModel)]="password"
-          name="password"
-          required
-        />
-        <br />
-        <button type="submit">Login</button>
+        
+        <!-- Material Form Field for Email -->
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            type="email"
+            id="email"
+            [(ngModel)]="email"
+            name="email"
+            required
+          />
+        </mat-form-field>
+        
+        <!-- Material Form Field for Password -->
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+        </mat-form-field>
+        
+        <!-- Material Raised Button -->
+        <button mat-raised-button type="submit">Login</button>
       </form>
     </div>
     <p>
@@ -95,4 +43,5 @@
     </p>
     <p>New User? <a [routerLink]="'/register'">Register</a></p>
   </div>
-</div> -->
+</div>
+

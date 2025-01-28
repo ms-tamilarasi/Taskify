@@ -11,6 +11,14 @@ import { ImportantComponent } from './important/important.component';
 import { PlannedComponent } from './planned/planned.component';
 import { TaskService } from './task-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -26,7 +34,15 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     MainRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatListModule,
+    MatChipsModule,
+    MatTooltipModule
   ],
   providers: [TaskService]
 })

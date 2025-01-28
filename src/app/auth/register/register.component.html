@@ -1,5 +1,67 @@
 <div class="register-page">
   <div class="left-side">
+    <img src="signup.jpg" alt="Signup Image" class="signup-image" />
+  </div>
+  <div class="right-side">
+    <h3>Create a new account!</h3>
+    <form (ngSubmit)="registerNewUser()" class="form-width">
+      
+      <!-- First Name -->
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" id="first-name" name="firstName" [(ngModel)]="firstName" required />
+      </mat-form-field>
+
+      <!-- Last Name -->
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" id="last-name" name="lastName" [(ngModel)]="lastName" required />
+      </mat-form-field>
+
+      <!-- Email -->
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" id="email" name="email" [(ngModel)]="email" required />
+      </mat-form-field>
+
+      <!-- Phone -->
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Phone</mat-label>
+        <input matInput type="tel" id="phone" name="phone" [(ngModel)]="phone" required />
+      </mat-form-field>
+
+      <!-- Password -->
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" id="password" name="password" [(ngModel)]="password" required />
+      </mat-form-field>
+
+      <!-- Confirm Password -->
+      <mat-form-field appearance="fill" class="form-group">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" id="confirm-password" name="confirmPassword" [(ngModel)]="confirmPassword" required />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" class="btn-submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a [routerLink]="'/login'">Login</a></p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="register-page">
+  <div class="left-side">
     <img src="signup.jpg" alt="Signup Image" class="signup-image">
   </div>
   <div class="right-side">
@@ -56,4 +118,4 @@
   
     <p>Already have an account? <a [routerLink]="'/login'">Login</a></p>
   </div>
-</div>
+</div> -->

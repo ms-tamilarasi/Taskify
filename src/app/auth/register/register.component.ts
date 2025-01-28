@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-    selector: 'app-register',
-    templateUrl: './register.component.html',
-    styleUrl: './register.component.scss',
-    standalone: false
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
+  standalone: false,
 })
 export class RegisterComponent {
   showOtp: boolean = false;
@@ -17,23 +18,34 @@ export class RegisterComponent {
   password: string = '';
   confirmPassword: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private snackBar: MatSnackBar 
+  ) {}
 
-  moveFocus(event: any, nextInputIndex: number) {
-    if (event.target.value.length == 1 && nextInputIndex <= 4) {
-      const nextInput = document.getElementById(`otp${nextInputIndex}`) as HTMLInputElement;
-      if (nextInput) nextInput.focus();
+  private showSnackbar(message: string, type: string) {
+    let snackBarClass = '';
+    if (type === 'success') {
+      snackBarClass = 'success-snackbar';
+    } else if (type === 'error') {
+      snackBarClass = 'error-snackbar';
     }
+
+    this.snackBar.open(message, 'Close', {
+      duration: 3000, 
+      panelClass: [snackBarClass], 
+    });
   }
 
   registerNewUser() {
     if (!this.firstName || !this.lastName || !this.email || !this.phone || !this.password || !this.confirmPassword) {
-      alert('Please fill in all the fields!');
+      this.showSnackbar('Please fill in all the fields!', 'error');
       return;
     }
 
     if (this.password !== this.confirmPassword) {
-      alert('Passwords do not match!');
+      this.showSnackbar('Passwords do not match!', 'error');
       return;
     }
 
@@ -42,22 +54,21 @@ export class RegisterComponent {
       lastName: this.lastName,
       email: this.email,
       phone: this.phone,
-      password: this.password
+      password: this.password,
     };
 
-
-    const apiUrl = 'http://localhost:3000/users'; 
+    const apiUrl = 'http://localhost:3000/users';
 
     this.http.post<any>(apiUrl, newUser).subscribe(
       (response) => {
-        alert('Registration successful!');
+        this.showSnackbar('Registration successful!', 'success');
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('userId', response.id);
         this.router.navigate(['/login']);
       },
       (error) => {
         console.error('Error while registering:', error);
-        alert('Error while registering. Please try again.');
+        this.showSnackbar('Error while registering. Please try again.', 'error');
       }
     );
   }

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css'; 
 body.dark-mode {
   background-color: #0d1b2a;
   color: white;
@@ -38,5 +39,21 @@ body.dark-mode {
 
   & .planned-tasks-container h3 {
     color: white !important;
+  }
+
+  & .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {
+    color: white;
+  }
+
+  & .mdc-list-item__primary-text {
+    color: white;
+  }
+
+  & mat-mdc-text-field-wrapper {
+    border-color: #007bff !important;
+  }
+
+  & .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+    color: #007bff !important;
   }
 }

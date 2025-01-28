@@ -9,16 +9,8 @@
       "id": "a7f9c0bc-d9e2-4c68-a8b1-c9a05877979f"
     },
     {
-      "text": "Go for a run",
-      "isImportant": true,
-      "isDatePickerVisible": false,
-      "dueDate": "2025-01-13",
-      "isDateAvailable": true,
-      "id": "f9c5c1a4-b7d1-41b2-96b5-5e8da6d599b4"
-    },
-    {
       "text": "Buy groceries",
-      "isImportant": false,
+      "isImportant": true,
       "isDatePickerVisible": false,
       "dueDate": "2025-01-15",
       "isDateAvailable": true,
@@ -26,7 +18,7 @@
     },
     {
       "text": "Attend meeting",
-      "isImportant": false,
+      "isImportant": true,
       "isDatePickerVisible": false,
       "dueDate": "2025-01-16",
       "isDateAvailable": true,
@@ -47,6 +39,22 @@
       "isDatePickerVisible": true,
       "dueDate": "2025-01-17",
       "isDateAvailable": true
+    },
+    {
+      "id": "841e65a6-b909-4fce-bc05-ec58ec25e4f3",
+      "text": "Prepare",
+      "isImportant": false,
+      "isDatePickerVisible": false,
+      "dueDate": null,
+      "isDateAvailable": false
+    },
+    {
+      "id": "3d7b07e6-6d76-49e0-a065-33ad49c7fed5",
+      "text": "hc",
+      "isImportant": true,
+      "isDatePickerVisible": false,
+      "dueDate": null,
+      "isDateAvailable": false
     }
   ]
 }

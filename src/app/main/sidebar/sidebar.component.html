@@ -1,13 +1,23 @@
-<button class="toggle-btn" (click)="toggleSidebar()">
-    <i class="fa-solid" [ngClass]="{'fa-chevron-right': isSidebarOpen, 'fa-chevron-left': !isSidebarOpen}"></i>
-  </button>
-  
-  <div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
-    <ul class="sidebar-menu">
-      <li><a routerLink="/home/" routerLinkActive="active"><i class="fa-solid fa-list"></i> Tasks</a></li>
-      <li><a routerLink="/home/important" routerLinkActive="active"><i class="fa-solid fa-star"></i> Important</a></li>
-      <li><a routerLink="/home/planned" routerLinkActive="active"><i class="fa-solid fa-calendar"></i> Planned</a></li>
-      <li><a routerLink="/home/assigned-to-me" routerLinkActive="active"><i class="fa-solid fa-user-check"></i> Assigned to Me</a></li>
-    </ul>
-  </div>
-  
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidebar" mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home/" routerLinkActive="active">
+        <mat-icon>list</mat-icon> Tasks
+      </a>
+      <a mat-list-item routerLink="/home/important" routerLinkActive="active">
+        <mat-icon>star</mat-icon> Important
+      </a>
+      <a mat-list-item routerLink="/home/planned" routerLinkActive="active">
+        <mat-icon>calendar_today</mat-icon> Planned
+      </a>
+      <a mat-list-item routerLink="/home/assigned-to-me" routerLinkActive="active">
+        <mat-icon>check_circle</mat-icon> Assigned to Me
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+
+  <!-- <mat-sidenav-content>
+
+  </mat-sidenav-content> -->
+</mat-sidenav-container>

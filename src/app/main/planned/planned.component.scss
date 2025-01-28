@@ -1,21 +1,21 @@
 .planned-tasks-container {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .planned-tasks-container span {
   display: flex;
-  align-items: center;        
+  align-items: center;
 }
 
 .planned-tasks-container i {
-  font-size: 18px;             
+  font-size: 18px;
   color: #007bff;
-  margin-right: 14px;         
+  margin-right: 14px;
 }
 
-.planned-tasks-container h3 {                 
-  font-size: 24px;             
-  color: #007bff;              
+.planned-tasks-container h3 {
+  font-size: 24px;
+  color: #007bff;
 }
 
 .planned-tasks-container ul {
@@ -26,7 +26,7 @@
 
 .planned-tasks-container li {
   background-color: #f9f9f9;
-  padding: 15px;
+  padding: 8px 40px;
   margin: 16px 0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -44,19 +44,30 @@
   margin-right: 10px;
 }
 
+.chip-container {
+  margin-left: auto; 
+}
+
+.due-date-chip {
+  background-color: #e0e0e0; 
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .planned-tasks-container .header {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 5px;
 }
 
 .planned-tasks-container .header i {
-  font-size: 30px; 
-  color: #007bff; 
+  font-size: 30px;
+  color: #007bff;
 }
 
 .planned-tasks-container .header h3 {
   font-size: 24px;
-  color: #007bff; 
+  color: #007bff;
   margin: 0;
 }

@@ -1,13 +1,17 @@
 <div class="planned-tasks-container">
   <span>
-    <i class="fa-solid fa-calendar"></i>
+    <mat-icon class="fa-solid fa-calendar" color="primary"></mat-icon>
     <h3>Planned Tasks</h3>
   </span>
+
   <ul>
     <li *ngFor="let task of plannedTasks">
       <span>{{ task.text }}</span>
-      <div class="due-date-box">
-        {{ task.dueDate | date: 'dd/MM/yyyy' }}
+      
+      <div class="chip-container">
+        <mat-chip class="due-date-chip" matTooltip="{{ task.dueDate | date: 'dd/MM/yyyy' }}">
+          {{ task.dueDate | date: 'dd/MM/yyyy' }}
+        </mat-chip>
       </div>
     </li>
   </ul>

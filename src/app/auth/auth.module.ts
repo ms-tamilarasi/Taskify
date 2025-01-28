@@ -15,6 +15,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+// import { MatErrorModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
+    MatSnackBarModule,
     MatCardModule,
     MatRippleModule,
     BrowserAnimationsModule

@@ -1,27 +1,35 @@
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<header>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  
+  <header>
     <div class="header-container">
-        <div class="logo-container">
-            <i class="fa-solid fa-grid todo-icon"></i> 
-            <h3>ToDo</h3>
-        </div>
-        <form>
-            <div class="search-container">
-                <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" name="search" id="search" placeholder="Search..." [(ngModel)]="searchQuery" (input)="onSearch()" >
-            </div>
-        </form>
-        <div class="header-icons">
-            <button class="theme-toggle" (click)="toggleTheme()">
-                <i class="fa-solid fa-sun light-icon" *ngIf="!isDarkMode"></i>
-                <i class="fa-solid fa-moon dark-icon" *ngIf="isDarkMode"></i>
-            </button>
-            <i class="fa-solid fa-cog settings-icon"></i> 
-            <i class="fa-solid fa-user profile-icon"></i> 
-        </div>
+      <!-- Logo and ToDo -->
+      <div class="logo-container">
+        <mat-icon class="todo-icon">grid_view</mat-icon> 
+        <h3>ToDo</h3>
+      </div>
+  
+      <!-- Search Box -->
+      <form>
+        <mat-form-field class="search-container" appearance="outline">
+          <mat-icon matPrefix>search</mat-icon>
+          <input matInput type="text" placeholder="Search..." [(ngModel)]="searchQuery" (input)="onSearch()">
+        </mat-form-field>
+      </form>
+  
+      <!-- Header Icons -->
+      <div class="header-icons">
+        <!-- Theme Toggle -->
+        <button mat-icon-button class="theme-toggle" (click)="toggleTheme()">
+          <mat-icon *ngIf="!isDarkMode">wb_sunny</mat-icon> 
+          <mat-icon *ngIf="isDarkMode">nights_stay</mat-icon> 
+        </button>
+  
+        <!-- Settings and Profile Icons -->
+        <mat-icon class="settings-icon">settings</mat-icon>
+        <mat-icon class="profile-icon">person</mat-icon>
+      </div>
     </div>
-</header>
-
+  </header>
+  

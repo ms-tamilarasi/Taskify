@@ -1,25 +1,33 @@
 <div class="important-tasks">
   <span>
-    <i class="fa-solid fa-star"></i>
+    <mat-icon class="fa-solid fa-star" color="primary"></mat-icon>
     <h2>Important Tasks</h2>
   </span>
-  
+
   <div *ngIf="isAddTaskOpen" class="task-input-container">
-    <input type="text" [(ngModel)]="newTask" placeholder="Enter your task" />
-    <button class="save-task-btn" (click)="saveTask()">{{isEditMode ? 'Edit' : 'Save'}} Task</button>
+    <mat-form-field appearance="outline" class="task-input">
+      <mat-label>Enter your task</mat-label>
+      <input matInput [(ngModel)]="newTask" placeholder="Enter your task" />
+    </mat-form-field>
+
+    <button mat-raised-button class="save-task-btn" (click)="saveTask()">
+      {{ isEditMode ? 'Edit' : 'Save' }} Task
+    </button>
   </div>
 
   <ul>
     <li *ngFor="let task of importantTasks; let i = index">
       <span>{{ task.text }}</span>
 
-      <button class="edit-btn" (click)="editTask(i)">
-        <i class="fa-solid fa-pen"></i>
-      </button>
+      <div class="task-actions">
+        <button mat-icon-button class="edit-btn" (click)="editTask(i)">
+          <mat-icon>edit</mat-icon>
+        </button>
 
-      <button class="delete-btn" (click)="deleteTask(i)">
-        <i class="fa-solid fa-trash"></i>
-      </button>
+        <button mat-icon-button class="delete-btn" (click)="deleteTask(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
     </li>
   </ul>
 </div>
